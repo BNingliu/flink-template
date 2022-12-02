@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ytd.flink</groupId>
+        <artifactId>ytd-flink</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>com.ytd.flink</groupId>
+    <artifactId>ytd-flink-template</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!--        mvn install:install-file -Dfile=lib/flink-connector-kudu_2.11-1.1-SNAPSHOT.jar -DgroupId=com.ytd -DartifactId=flink-connector-kudu_2.11 -Dversion=1.1-SNAPSHOT -Dpackaging=jar-->
+        <dependency>
+            <groupId>com.ytd</groupId>
+            <artifactId>flink-connector-kudu_2.11</artifactId>
+            <version>1.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ytd.flink</groupId>
+            <artifactId>ytd-opengauss-connetor</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ytd.flink</groupId>
+            <artifactId>ytd-mysql-connetor</artifactId>
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/lib/ytd-mysql-connetor-1.0.jar</systemPath>-->
+<!--            <scope>provided</scope>-->
+        </dependency>
+
+        <!-- rabbitMQ -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-rabbitmq_${scala.binary.version}</artifactId>
+<!--            <version>1.13.2</version>-->
+            <version>${flink.version}</version>
+<!--            <scope>provided</scope>-->
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.flink</groupId>-->
+<!--            <artifactId>flink-sql-connector-kafka_${scala.binary.version}</artifactId>-->
+<!--            <version>${flink.version}</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka_${scala.binary.version}</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-elasticsearch6_2.11</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-test-utils</artifactId>
+            <version>${flink.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+<!--        &lt;!&ndash; flink-doris-connector &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.doris</groupId>-->
+<!--            <artifactId>flink-doris-connector-1.14_2.12</artifactId>-->
+<!--            <version>1.0.3</version>-->
+<!--        </dependency>-->
+
+
+
+
+        <!--        mvn install:install-file -Dfile=lib/ytd-impala-connetor.jar -DgroupId=com.ytd -DartifactId=ytd-impala-connetor -Dversion=1.1 -Dpackaging=jar-->
+<!--        <dependency>-->
+<!--            <groupId>com.ytd.flink</groupId>-->
+<!--            <artifactId>ytd-impala-connetor</artifactId>-->
+<!--            &lt;!&ndash;            <version>1.0</version>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <scope>system</scope>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <systemPath>${project.basedir}/lib/ytd-impala-connetor-1.0-SNAPSHOT.jar</systemPath>&ndash;&gt;-->
+<!--        </dependency>-->
+
+    </dependencies>
+
+
+    <build>
+        <finalName>ytd-flink-template</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
