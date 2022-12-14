@@ -30,7 +30,10 @@
 <!--        <module>ytd-impala-connetor</module>-->
         <module>ytd-kudu-connetor</module>
         <module>ytd-opengauss-connetor</module>
+        <module>ytd-greenplum-connetor</module>
         <module>ytd-mysql-connetor</module>
+        <module>ytd-clickhouse-connetor</module>
+
     </modules>
 
     <dependencies>
@@ -148,11 +151,11 @@
     </dependencies>
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.ytd.flink</groupId>
-                <artifactId>ytd-impala-connetor</artifactId>
-                <version>${ytd.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.ytd.flink</groupId>-->
+<!--                <artifactId>ytd-impala-connetor</artifactId>-->
+<!--                <version>${ytd.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>com.ytd.flink</groupId>
@@ -163,6 +166,11 @@
             <dependency>
                 <groupId>com.ytd.flink</groupId>
                 <artifactId>ytd-mysql-connetor</artifactId>
+                <version>${ytd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ytd.flink</groupId>
+                <artifactId>ytd-greenplum-connetor</artifactId>
                 <version>${ytd.version}</version>
             </dependency>
 
