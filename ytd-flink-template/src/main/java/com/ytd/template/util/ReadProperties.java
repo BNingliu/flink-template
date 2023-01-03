@@ -13,7 +13,7 @@ public class ReadProperties {
 
     private static Properties properties = new Properties();
     private static String filePath= "config-%s.properties";
-    private static String fileDefaultPath= "config-prod.properties";
+    private static String fileDefaultPath= "config-demo.properties";
 
     public static String getProperty(String keyWord,String active) {
         // 使用ClassLoader加载properties配置文件生成对应的输入流

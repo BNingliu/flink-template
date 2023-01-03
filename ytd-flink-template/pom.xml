@@ -17,12 +17,24 @@
 
     <dependencies>
         <!--        mvn install:install-file -Dfile=lib/flink-connector-kudu_2.11-1.1-SNAPSHOT.jar -DgroupId=com.ytd -DartifactId=flink-connector-kudu_2.11 -Dversion=1.1-SNAPSHOT -Dpackaging=jar-->
+<!--        <dependency>-->
+<!--            <groupId>com.ytd</groupId>-->
+<!--            <artifactId>flink-connector-kudu_2.11</artifactId>-->
+<!--            <version>1.1-SNAPSHOT</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>com.ytd</groupId>
-            <artifactId>flink-connector-kudu_2.11</artifactId>
-            <version>1.1-SNAPSHOT</version>
-            <scope>provided</scope>
+            <groupId>com.ytd.flink</groupId>
+            <artifactId>ytd-greenplum-connetor</artifactId>
+            <version>1.0</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.ytd.flink</groupId>-->
+<!--            <artifactId>ytd-clickhouse-connetor</artifactId>-->
+<!--            <version>1.0</version>-->
+<!--        </dependency>-->
+
 
         <dependency>
             <groupId>com.ytd.flink</groupId>
@@ -31,13 +43,13 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.ytd.flink</groupId>
-            <artifactId>ytd-mysql-connetor</artifactId>
-<!--            <scope>system</scope>-->
-<!--            <systemPath>${project.basedir}/lib/ytd-mysql-connetor-1.0.jar</systemPath>-->
-<!--            <scope>provided</scope>-->
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.ytd.flink</groupId>-->
+<!--            <artifactId>ytd-mysql-connetor</artifactId>-->
+<!--&lt;!&ndash;            <scope>system</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;            <systemPath>${project.basedir}/lib/ytd-mysql-connetor-1.0.jar</systemPath>&ndash;&gt;-->
+<!--&lt;!&ndash;            <scope>provided</scope>&ndash;&gt;-->
+<!--        </dependency>-->
 
         <!-- rabbitMQ -->
         <dependency>
@@ -81,9 +93,6 @@
 <!--            <artifactId>flink-doris-connector-1.14_2.12</artifactId>-->
 <!--            <version>1.0.3</version>-->
 <!--        </dependency>-->
-
-
-
 
         <!--        mvn install:install-file -Dfile=lib/ytd-impala-connetor.jar -DgroupId=com.ytd -DartifactId=ytd-impala-connetor -Dversion=1.1 -Dpackaging=jar-->
 <!--        <dependency>-->

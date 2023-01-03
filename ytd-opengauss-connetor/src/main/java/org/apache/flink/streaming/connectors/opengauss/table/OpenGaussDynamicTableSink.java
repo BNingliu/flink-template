@@ -44,11 +44,8 @@ public class OpenGaussDynamicTableSink implements DynamicTableSink {
         System.out.println("SinkRuntimeProvider");
         System.out.println(dataType);
 //        SerializationSchema<RowData> serializationSchema = encodingFormat.createRuntimeEncoder(context, dataType);
-
-
-//        OpenGaussSinkFunction gbasedbtSinkFunction = new OpenGaussSinkFunction(jdbcOptions,dataType, catalogTable);
-        GpSinkFunction gpSinkFunction = new GpSinkFunction(jdbcOptions,dataType, catalogTable);
-        return SinkFunctionProvider.of(gpSinkFunction,1);
+        OpenGaussSinkFunction gbasedbtSinkFunction = new OpenGaussSinkFunction(jdbcOptions,dataType, catalogTable);
+        return SinkFunctionProvider.of(gbasedbtSinkFunction,1);
     }
 
     @Override

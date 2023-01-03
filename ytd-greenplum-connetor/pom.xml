@@ -20,10 +20,9 @@
         <flink.cdc.version>2.2.0</flink.cdc.version>
         <scala.binary.version>2.11</scala.binary.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <!--        <flink.cdc.version>2.2.0</flink.cdc.version>-->
-<!--        <maven.compiler.source>${java.version}</maven.compiler.source>-->
-<!--        <maven.compiler.target>${java.version}</maven.compiler.target>-->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -48,12 +47,6 @@
             <version>${flink.cdc.version}</version>
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.postgresql</groupId>-->
-<!--            <artifactId>postgresql</artifactId>-->
-<!--            <version>42.3.3</version>-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 <!--        <dependency>-->
 <!--            <groupId>org.postgresql</groupId>-->

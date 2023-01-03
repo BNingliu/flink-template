@@ -137,7 +137,7 @@
 <!--                <configuration>-->
 <!--                    <java>-->
 <!--                        <googleJavaFormat>-->
-<!--                            <version>1.7</version>-->
+<!--                            <version>1.8</version>-->
 <!--                            <style>AOSP</style>-->
 <!--                        </googleJavaFormat>-->
 <!--                        &lt;!&ndash; \# refers to the static imports &ndash;&gt;-->
@@ -207,10 +207,10 @@
                                     </excludes>
                                 </filter>
                             </filters>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                            </transformers>
+<!--                            <transformers>-->
+<!--                                <transformer-->
+<!--                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>-->
+<!--                            </transformers>-->
                         </configuration>
                     </execution>
                 </executions>
@@ -226,5 +226,5 @@
             </plugin>
         </plugins>
     </build>
-    
+
 </project>
